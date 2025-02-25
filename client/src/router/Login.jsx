@@ -30,7 +30,7 @@ return  toast.warning("Please read all the Terms & Condition before Login ")
 const email = emailRef.current.value
 const password = passwordRef.current.value
 
-const res = await fetch("http://localhost:5000/login", {
+const res = await fetch("https://mydear-diary-5.onrender.com/login", {
   method:"POST",
   headers:{
     "Content-Type": "application/json",

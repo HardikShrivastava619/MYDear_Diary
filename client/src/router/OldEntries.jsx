@@ -28,7 +28,7 @@ const OldEntries = () => {
       const isoDate = date.toISOString();
 
       // Send the ISO date to the backend
-      const res = await fetch(`http://localhost:5000/getSearcheDates/${uid}`, {
+      const res = await fetch(`https://mydear-diary-5.onrender.com/getSearcheDates/${uid}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ setsearchedEntrie(data?.searchEntry)
 
   const getEnteredDates = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/getEnteredDates/${uid}`);
+      const res = await fetch(`https://mydear-diary-5.onrender.com/getEnteredDates/${uid}`);
       const data = await res.json();
 
       if (data?.success) {

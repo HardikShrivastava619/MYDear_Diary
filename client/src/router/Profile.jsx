@@ -26,7 +26,7 @@ const handleUpdate = async (e)=>{
         const password = passwordref.current.value
         const answer = answerref.current.value
        
-        const res = await fetch(`http://localhost:5000/UpdateProfile/${uid}` , {
+        const res = await fetch(`https://mydear-diary-5.onrender.com/UpdateProfile/${uid}` , {
 method:"POST",
 headers:{
   "Content-Type" : "application/json",
@@ -54,7 +54,7 @@ if (data?.success === false) {
         try {
            
            
-            const res = await fetch(`http://localhost:5000/get-user/${uid}`)
+            const res = await fetch(`https://mydear-diary-5.onrender.com/get-user/${uid}`)
             const data = await res.json()
       
         } catch (error) {

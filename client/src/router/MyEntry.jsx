@@ -21,7 +21,7 @@ const MyEntry = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resEntry = await fetch(`http://localhost:5000/getEnteries/${params.eid}`);
+        const resEntry = await fetch(`https://mydear-diary-5.onrender.com/getEnteries/${params.eid}`);
         const dataEntry = await resEntry.json();
         setEntry(dataEntry?.entry);
         if (dataEntry?.entry?.rating == null  ) {
@@ -38,7 +38,7 @@ const MyEntry = () => {
           setEmoji("😃 It was a Marvellous Day")
         }
         
-        const resPhotos = await fetch(`http://localhost:5000/entryPhoto/${dataEntry?.entry?._id}`);
+        const resPhotos = await fetch(`https://mydear-diary-5.onrender.com/entryPhoto/${dataEntry?.entry?._id}`);
         const dataPhotos = await resPhotos.json();
         if (dataPhotos.success) setPhotos(dataPhotos.photosArray);
       } catch (error) {

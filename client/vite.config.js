@@ -8,7 +8,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/images": "http://localhost:5000",  // Proxy requests for images to the backend
+      "/images": "https://mydear-diary-5.onrender.com",  // Proxy requests for images to the backend
     },
   },
 });

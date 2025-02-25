@@ -63,7 +63,7 @@ photo.forEach((file)=>{
   entryData.append("photos" , file)
 
 }   )
-const res = await fetch("http://localhost:5000/writingDiary" , {
+const res = await fetch("https://mydear-diary-5.onrender.com/writingDiary" , {
             method:"POST",
             headers:{
               "Authorization" : `Bearer ${loginData?.token}`

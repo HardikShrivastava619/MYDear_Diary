@@ -19,7 +19,7 @@ const ForgetPassword = () => {
         const newPassword = passwordRef.current.value
         const answer = answerRef.current.value
         
-        const res = await fetch("http://localhost:5000/forget-password", {
+        const res = await fetch("https://mydear-diary-5.onrender.com/forget-password", {
           method:"POST",
           headers:{
             "Content-Type": "application/json",

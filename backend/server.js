@@ -18,7 +18,7 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://mydear-diary-5.onrender.com",
   methods: "GET,PUT,POST,DELETE",
   credentials: true,
 };

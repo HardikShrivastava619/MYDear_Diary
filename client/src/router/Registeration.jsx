@@ -21,7 +21,7 @@ const Registeration = () =>{
    const password = passwordref.current.value
    const answer = answerref.current.value
   
-   const res =  await fetch ('http://localhost:5000/register' , {
+   const res =  await fetch ('https://mydear-diary-5.onrender.com/register' , {
    method:"POST",
    headers:{
      'Content-Type': "application/json"

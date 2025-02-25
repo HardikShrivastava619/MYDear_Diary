@@ -32,7 +32,7 @@ const EditEntry = () => {
  useEffect(() => {
   const fetchData = async () => {
     try {
-      const resEntry = await fetch(`http://localhost:5000/getEnteries/${params.eid}`);
+      const resEntry = await fetch(`https://mydear-diary-5.onrender.com/getEnteries/${params.eid}`);
       const dataEntry = await resEntry.json();
       setEntry(dataEntry?.entry );
       setdisplayDate(dataEntry?.entry?.date)
@@ -51,7 +51,7 @@ setUsers(dataEntry?.entry?.user)
   }else if (dataEntry?.entry?.rating === 5) {
     setRating("It was the Marvellous Day 😃");
   }
-      const resPhotos = await fetch(`http://localhost:5000/entryPhoto/${dataEntry?.entry?._id}`);
+      const resPhotos = await fetch(`https://mydear-diary-5.onrender.com/entryPhoto/${dataEntry?.entry?._id}`);
       const dataPhotos = await resPhotos.json();
       
       
@@ -114,7 +114,7 @@ setUsers(dataEntry?.entry?.user)
           }
         });
     
-        const res = await fetch(`http://localhost:5000/editEnteries/${params.eid}`, {
+        const res = await fetch(`https://mydear-diary-5.onrender.com/editEnteries/${params.eid}`, {
           method: "POST",
           body: entryData,
         });
@@ -160,7 +160,7 @@ const handleDelete = async ()=>{
                 onClick={async () => {
                   try {
                     const res = await fetch(
-                      `http://localhost:5000/deleteentry/${params.eid}`,
+                      `https://mydear-diary-5.onrender.com/deleteentry/${params.eid}`,
                       { method: "DELETE" }
                     );
                     const data = await res.json();
@@ -248,7 +248,7 @@ const handleImageRemover = async (photo)=>{
               onClick={async () => {
                 try {
                   
-const res = await fetch(`http://localhost:5000/imgRemover/${params.eid} ` , {
+const res = await fetch(`https://mydear-diary-5.onrender.com/imgRemover/${params.eid} ` , {
   method:"POST",
   headers:{
     "Content-Type": "application/json"
