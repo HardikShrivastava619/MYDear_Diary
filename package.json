@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/server.js",
-    "build": "npm install &&  npm install --prefix client  && npm run build --prefix client",
-    "start":"nodemon backend/server.js"
-   },
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "start": "nodemon backend/server.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -21,6 +21,7 @@
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "rollup": "^2.60.0"  
   }
 }
